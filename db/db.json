@@ -1,18 +1,43 @@
 {
-  "usuarios": [
+  "restaurantes": [
     {
-      "id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
-      "login": "admin",
-      "senha": "123",
-      "nome": "Administrador do Sistema",
-      "email": "admin@abc.com"
+      "id": "2",
+      "nome": "L'Entrecôte de Paris",
+      "descricao": "Experiência francesa com prato único e molho secreto.",
+      "categoria": "Francesa",
+      "destaque": true,
+      "endereco": "Rua Marília de Dirceu, 226 – Lourdes, BH",
+      "telefone": "(31) 3292-5523",
+      "horario": "Terça a domingo, 12h às 15h e 19h às 23h",
+      "site": "www.lentrecotedeparis.com.br",
+      "preco_medio": "R$ 95,00 por pessoa"
     },
     {
-      "id": "ec37c83d-4b7f-458d-9e10-3fda7d37cd3e",
-      "login": "user",
-      "senha": "123",
-      "nome": "Usuario Comum",
-      "email": "user@abc.com"
+      "id": "3",
+      "nome": "Xapuri",
+      "descricao": "Referência em comida mineira tradicional no fogão à lenha.",
+      "categoria": "Mineira",
+      "destaque": true,
+      "endereco": "Av. Deputado Anuar Menhem, 1179 – Pampulha, BH",
+      "telefone": "(31) 3496-6198",
+      "horario": "Terça a domingo, 11h30 às 17h",
+      "site": "www.xapurirestaurante.com.br",
+      "preco_medio": "R$ 80,00 por pessoa"
+    },
+    {
+      "id": "2be5"
+    },
+    {
+      "id": 4,
+      "nome": "Taste Vin",
+      "descricao": "Bistrô sofisticado com wine bar e harmonizações especiais.",
+      "categoria": "Contemporânea",
+      "destaque": false,
+      "endereco": "Rua Curitiba, 2105 – Lourdes, BH",
+      "telefone": "(31) 3335-6741",
+      "horario": "Segunda a sábado, 12h às 15h e 19h às 23h",
+      "site": "www.tastevinbh.com.br",
+      "preco_medio": "R$ 180,00 por pessoa"
     }
   ]
 }
