@@ -98,7 +98,7 @@ body {
   background-color: #e67a2e;
 }
 
-/* Cards de restaurantes */
+/* Cards de Restaurantes */
 .card {
   border: 1px solid #ddd;
   margin-bottom: 20px;
@@ -121,6 +121,7 @@ body {
 .card-title {
   color: #ff8c42;
   font-weight: bold;
+  min-height: 50px;
 }
 
 .card-text {
@@ -129,12 +130,6 @@ body {
 
 .badge {
   background-color: #ff8c42;
-}
-
-.card-body .badge {
-  margin-left: 0;
-  margin-bottom: 10px;
-  display: inline-block;
 }
 
 .btn-detalhes {
@@ -149,7 +144,7 @@ body {
   color: white;
 }
 
-/* Seção sobre Aluno */
+/* Seção Aluno */
 .secao-aluno {
   background-color: #fff3e0;
 }
@@ -224,9 +219,18 @@ body {
   margin: 0;
 }
 
-/* Detalhes */
+/* Página de Detalhes */
 .secao-detalhes {
   padding: 40px 0;
+}
+
+.acoes-crud {
+  display: flex;
+  gap: 10px;
+}
+
+.acoes-crud .btn {
+  font-weight: 600;
 }
 
 .btn-voltar {

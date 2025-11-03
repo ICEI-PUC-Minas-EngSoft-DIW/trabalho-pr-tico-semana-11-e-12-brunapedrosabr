@@ -1,211 +1,89 @@
-// Dados dos Restaurantes (JSON)
-const dados = {
-  restaurantes: [
-    {
-      id: 1,
-      nome: "Coco Bambu",
-      descricao: "Frutos do mar e pratos nordestinos em ambiente elegante.",
-      conteudo:
-        "O Coco Bambu é conhecido pela variedade de pratos com frutos do mar, porções generosas e ambiente refinado. Ideal para encontros em família ou comemorações especiais. A casa oferece um cardápio variado com opções que vão desde camarões até lagostas, sempre com ingredientes frescos e de alta qualidade.",
-      categoria: "Frutos do Mar",
-      destaque: true,
-      endereco: "Av. Cristiano Machado, 4000 – União, BH",
-      telefone: "(31) 3429-2920",
-      horario: "Segunda a domingo, 11h às 23h",
-      site: "www.cocobambu.com",
-      preco_medio: "R$ 120,00 por pessoa",
-      imagem_principal: "assets/img/coco_bambu.jpg",
-      fotos: [
-        {
-          id: 1,
-          titulo: "Camarão internacional",
-          imagem: "assets/img/camarao_internacional.png",
-        },
-        {
-          id: 2,
-          titulo: "Lagosta grelhada",
-          imagem: "assets/img/lagosta_grelhada.png",
-        },
-        {
-          id: 3,
-          titulo: "Ambiente interno",
-          imagem: "assets/img/ambiente_coco_bambu.png",
-        },
-      ],
-    },
-    {
-      id: 2,
-      nome: "L'Entrecôte de Paris",
-      descricao: "Experiência francesa com prato único e molho secreto.",
-      conteudo:
-        "O L'Entrecôte de Paris oferece uma experiência gastronômica francesa única. O conceito é simples: você não escolhe o prato, todos recebem a famosa entrecôte grelhada acompanhada de batatas fritas crocantes e o molho secreto da casa. A sobremesa vem incluída no menu fixo.",
-      categoria: "Francesa",
-      destaque: true,
-      endereco: "Rua Marília de Dirceu, 226 – Lourdes, BH",
-      telefone: "(31) 3292-5523",
-      horario: "Terça a domingo, 12h às 15h e 19h às 23h",
-      site: "www.lentrecotedeparis.com.br",
-      preco_medio: "R$ 95,00 por pessoa",
-      imagem_principal: "assets/img/lentrecote.jpg",
-      fotos: [
-        {
-          id: 1,
-          titulo: "Entrecôte com molho secreto",
-          imagem: "assets/img/steak_carne.png",
-        },
-        {
-          id: 2,
-          titulo: "Sobremesas francesas",
-          imagem: "assets/img/sobremesa_francesa.png",
-        },
-        {
-          id: 3,
-          titulo: "Decoração parisiense",
-          imagem: "assets/img/ambiente_lentrecote.png",
-        },
-      ],
-    },
-    {
-      id: 3,
-      nome: "Xapuri",
-      descricao: "Referência em comida mineira tradicional no fogão à lenha.",
-      conteudo:
-        "O Xapuri é um dos restaurantes mais tradicionais de Belo Horizonte. Localizado na Pampulha, oferece autêntica comida mineira preparada no fogão à lenha. O ambiente rústico e acolhedor, rodeado por natureza, proporciona uma experiência completa da cultura mineira.",
-      categoria: "Mineira",
-      destaque: true,
-      endereco: "Av. Deputado Anuar Menhem, 1179 – Pampulha, BH",
-      telefone: "(31) 3496-6198",
-      horario: "Terça a domingo, 11h30 às 17h",
-      site: "www.xapurirestaurante.com.br",
-      preco_medio: "R$ 80,00 por pessoa",
-      imagem_principal: "assets/img/xapuri.jpg",
-      fotos: [
-        {
-          id: 1,
-          titulo: "Moranga recheada com carne seca",
-          imagem: "assets/img/moranga.png",
-        },
-        {
-          id: 2,
-          titulo: "Fogão à lenha",
-          imagem: "assets/img/fogao_a_lenha.png",
-        },
-        {
-          id: 3,
-          titulo: "Área externa",
-          imagem: "assets/img/area_externa_xapuri.png",
-        },
-      ],
-    },
-    {
-      id: 4,
-      nome: "Taste Vin",
-      descricao: "Bistrô sofisticado com wine bar e harmonizações especiais.",
-      conteudo:
-        "O Taste Vin é um bistrô elegante que combina alta gastronomia com uma excelente carta de vinhos. O ambiente intimista é perfeito para jantares românticos ou reuniões de negócios. O menu degustação com harmonização é o carro-chefe da casa.",
-      categoria: "Contemporânea",
-      destaque: false,
-      endereco: "Rua Curitiba, 2105 – Lourdes, BH",
-      telefone: "(31) 3335-6741",
-      horario: "Segunda a sábado, 12h às 15h e 19h às 23h",
-      site: "www.tastevinbh.com.br",
-      preco_medio: "R$ 180,00 por pessoa",
-      imagem_principal: "assets/img/frango_taste_vin.jpg",
-      fotos: [
-        {
-          id: 1,
-          titulo: "Soufflé",
-          imagem: "assets/img/sufle.jpg",
-        },
-        {
-          id: 2,
-          titulo: "Adega de vinhos",
-          imagem: "assets/img/adega_vinhos.jpg",
-        },
-        {
-          id: 3,
-          titulo: "Área externa",
-          imagem: "assets/img/area_externa_taste_vin.jpg",
-        },
-      ],
-    },
-    {
-      id: 5,
-      nome: "Nimbos Bar",
-      descricao:
-        "Bar urbano com coquetelaria criativa, hamburgueria artesanal e ambiente descontraído.",
-      conteudo:
-        "O Nimbos Bar é um dos pontos mais descolados da Savassi, em Belo Horizonte. Com uma proposta que mistura bar de calçada e hamburgueria, oferece coquetéis autorais, cervejas artesanais e porções criativas. O ambiente tem estilo industrial com pegada urbana, ideal para encontros entre amigos e noites animadas. Música ao vivo e DJs são comuns nas quintas e sextas.",
-      categoria: "Hamburgueria",
-      destaque: false,
-      endereco: "R. Sergipe, 629 - Savassi, Belo Horizonte - MG, 30130-171",
-      telefone: "(31) 3657-4149",
-      horario: "Terça a sábado, das 18h às 02h",
-      site: "https://www.instagram.com/nimbosbar",
-      preco_medio: "R$ 60,00 por pessoa",
-      imagem_principal: "assets/img/hamburguer.png",
-      fotos: [
-        {
-          id: 1,
-          titulo: "Coquetéis autorais",
-          imagem: "assets/img/drinks_nimbos.jpeg",
-        },
-        {
-          id: 2,
-          titulo: "Ambiente urbano",
-          imagem: "assets/img/ambiente_nimbos.jpeg",
-        },
-        {
-          id: 3,
-          titulo: "Porções criativas",
-          imagem: "assets/img/nimbos.jpg",
-        },
-      ],
-    },
-    {
-      id: 6,
-      nome: "Pizzaria Olegário",
-      descricao: "Pizzas premiadas com massa artesanal e forno a lenha.",
-      conteudo:
-        "A Pizzaria Olegário é referência em Belo Horizonte pela qualidade e tradição. Suas pizzas são preparadas com massa de fermentação natural e assadas em forno a lenha, garantindo sabor e textura únicos. O cardápio inclui clássicos napolitanos e criações autorais, além de pratos à la carte e uma carta de vinhos selecionada. O ambiente sofisticado e o atendimento impecável tornam a experiência memorável.",
-      categoria: "Pizzaria",
-      destaque: false,
-      endereco:
-        "Av. Olegário Maciel, 1748 - Lourdes, Belo Horizonte - MG, 30180-111",
-      telefone: "(31) 3337-4446",
-      horario:
-        "Segunda a sexta, 12h às 15h e 18h às 23h; sábado e domingo, 12h às 16h e 18h às 23h",
-      site: "https://www.redegourmet.com.br/marca/olegario",
-      preco_medio: "R$ 70,00 por pessoa",
-      imagem_principal: "assets/img/pizzas.jpg",
-      fotos: [
-        {
-          id: 1,
-          titulo: "Pizza artesanal",
-          imagem: "assets/img/pizza.jpg",
-        },
-        {
-          id: 2,
-          titulo: "Forno a lenha",
-          imagem: "assets/img/forno_pizzaria.jpg",
-        },
-        {
-          id: 3,
-          titulo: "Ambiente sofisticado",
-          imagem: "assets/img/ambiente_pizzaria.png",
-        },
-      ],
-    },
-  ],
-};
+const API_URL = "http://localhost:3000/restaurantes";
 
-// Função para criar o carrossel
-function montarCarrossel() {
-  const destaques = dados.restaurantes.filter((r) => r.destaque);
+// GET restaurantes
+async function buscarRestaurantes() {
+  try {
+    const response = await fetch(API_URL);
+    const restaurantes = await response.json();
+    return restaurantes;
+  } catch (error) {
+    console.error("Erro ao buscar restaurantes:", error);
+    return [];
+  }
+}
+
+// GET restaurante específico
+async function buscarRestaurantePorId(id) {
+  try {
+    const response = await fetch(`${API_URL}/${id}`);
+    const restaurante = await response.json();
+    return restaurante;
+  } catch (error) {
+    console.error("Erro ao buscar restaurante:", error);
+    return null;
+  }
+}
+
+// POST novo restaurante
+async function criarRestaurante(restaurante) {
+  try {
+    const response = await fetch(API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(restaurante),
+    });
+    const novoRestaurante = await response.json();
+    return novoRestaurante;
+  } catch (error) {
+    console.error("Erro ao criar restaurante:", error);
+    return null;
+  }
+}
+
+// PUT restaurante existente
+async function atualizarRestaurante(id, restaurante) {
+  try {
+    const response = await fetch(`${API_URL}/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(restaurante),
+    });
+    const restauranteAtualizado = await response.json();
+    return restauranteAtualizado;
+  } catch (error) {
+    console.error("Erro ao atualizar restaurante:", error);
+    return null;
+  }
+}
+
+// DELETE restaurante
+async function deletarRestaurante(id) {
+  try {
+    const response = await fetch(`${API_URL}/${id}`, {
+      method: "DELETE",
+    });
+    return response.ok;
+  } catch (error) {
+    console.error("Erro ao deletar restaurante:", error);
+    return false;
+  }
+}
+
+// Função para carrossel
+async function montarCarrossel() {
+  const restaurantes = await buscarRestaurantes();
+  const destaques = restaurantes.filter((r) => r.destaque);
   const indicadores = document.getElementById("indicadores-carrossel");
   const conteudo = document.getElementById("conteudo-carrossel");
 
   if (!indicadores || !conteudo) return;
+
+  indicadores.innerHTML = "";
+  conteudo.innerHTML = "";
 
   destaques.forEach((restaurante, index) => {
     const botao = document.createElement("button");
@@ -218,7 +96,6 @@ function montarCarrossel() {
     }
     indicadores.appendChild(botao);
 
-    // Cria slide do carrossel
     const item = document.createElement("div");
     item.classList.add("carousel-item");
     if (index === 0) item.classList.add("active");
@@ -236,13 +113,16 @@ function montarCarrossel() {
   });
 }
 
-// Função para criar os cards dos restaurantes
-function montarCards() {
+// Função para montar os cards dos restaurantes
+async function montarCards() {
+  const restaurantes = await buscarRestaurantes();
   const container = document.getElementById("container-cards");
 
   if (!container) return;
 
-  dados.restaurantes.forEach((restaurante) => {
+  container.innerHTML = "";
+
+  restaurantes.forEach((restaurante) => {
     const coluna = document.createElement("div");
     coluna.classList.add("col-md-4", "col-sm-6", "mb-4");
 
@@ -262,18 +142,19 @@ function montarCards() {
   });
 }
 
-// Função para obter o ID do item
+// ID da URL
 function obterIdDaURL() {
   const parametros = new URLSearchParams(window.location.search);
   return parseInt(parametros.get("id"));
 }
 
-// Função para mostrar detalhes do restaurante
-function mostrarDetalhes() {
+// Função para mostrar os detalhes do restaurante
+async function mostrarDetalhes() {
   const id = obterIdDaURL();
-  const restaurante = dados.restaurantes.find((r) => r.id === id);
+  const restaurante = await buscarRestaurantePorId(id);
 
   if (!restaurante) {
+    alert("Restaurante não encontrado!");
     window.location.href = "index.html";
     return;
   }
@@ -282,20 +163,22 @@ function mostrarDetalhes() {
 
   if (!container) return;
 
-  // Fotos adicionais dos restaurantes
+  // Galeria com as fotos
   let fotosHTML = "";
-  restaurante.fotos.forEach((foto) => {
-    fotosHTML += `
-      <div class="col-md-4 col-sm-6">
-        <div class="card card-foto">
-          <img src="${foto.imagem}" class="card-img-top" alt="${foto.titulo}">
-          <div class="card-body">
-            <p class="card-text">${foto.titulo}</p>
+  if (restaurante.fotos && restaurante.fotos.length > 0) {
+    restaurante.fotos.forEach((foto) => {
+      fotosHTML += `
+        <div class="col-md-4 col-sm-6">
+          <div class="card card-foto">
+            <img src="${foto.imagem}" class="card-img-top" alt="${foto.titulo}">
+            <div class="card-body">
+              <p class="card-text">${foto.titulo}</p>
+            </div>
           </div>
         </div>
-      </div>
-    `;
-  });
+      `;
+    });
+  }
 
   container.innerHTML = `
     <section class="secao-detalhes">
@@ -303,6 +186,16 @@ function mostrarDetalhes() {
         <a href="index.html" class="btn btn-voltar">
           <i class="bi bi-arrow-left"></i> Voltar para Home
         </a>
+        
+        <!-- Botões de ação CRUD -->
+        <div class="acoes-crud mb-3">
+          <button class="btn btn-warning" onclick="editarRestaurante(${restaurante.id})">
+            <i class="bi bi-pencil"></i> Editar
+          </button>
+          <button class="btn btn-danger" onclick="confirmarDelecao(${restaurante.id})">
+            <i class="bi bi-trash"></i> Deletar
+          </button>
+        </div>
         
         <!-- Informações Gerais -->
         <div class="info-detalhes">
@@ -337,16 +230,114 @@ function mostrarDetalhes() {
   `;
 }
 
+// Deletar restaurante selecionado
+async function confirmarDelecao(id) {
+  if (confirm("Tem certeza que deseja deletar este restaurante?")) {
+    const sucesso = await deletarRestaurante(id);
+    if (sucesso) {
+      alert("Restaurante deletado com sucesso!");
+      window.location.href = "index.html";
+    } else {
+      alert("Erro ao deletar restaurante.");
+    }
+  }
+}
+
+// Redirecionamento para edição
+function editarRestaurante(id) {
+  window.location.href = `formulario.html?id=${id}`;
+}
+
+// Função para preencher o formulário
+async function preencherFormulario() {
+  const id = obterIdDaURL();
+
+  if (id) {
+    document.getElementById("titulo-formulario").textContent =
+      "Editar Restaurante";
+    const restaurante = await buscarRestaurantePorId(id);
+
+    if (restaurante) {
+      document.getElementById("nome").value = restaurante.nome;
+      document.getElementById("descricao").value = restaurante.descricao;
+      document.getElementById("conteudo").value = restaurante.conteudo;
+      document.getElementById("categoria").value = restaurante.categoria;
+      document.getElementById("destaque").checked = restaurante.destaque;
+      document.getElementById("endereco").value = restaurante.endereco;
+      document.getElementById("telefone").value = restaurante.telefone;
+      document.getElementById("horario").value = restaurante.horario;
+      document.getElementById("site").value = restaurante.site;
+      document.getElementById("preco_medio").value = restaurante.preco_medio;
+      document.getElementById("imagem_principal").value =
+        restaurante.imagem_principal;
+    }
+  }
+}
+
+// Salvar restaurante
+async function salvarRestaurante(event) {
+  event.preventDefault();
+
+  const id = obterIdDaURL();
+
+  const restaurante = {
+    nome: document.getElementById("nome").value,
+    descricao: document.getElementById("descricao").value,
+    conteudo: document.getElementById("conteudo").value,
+    categoria: document.getElementById("categoria").value,
+    destaque: document.getElementById("destaque").checked,
+    endereco: document.getElementById("endereco").value,
+    telefone: document.getElementById("telefone").value,
+    horario: document.getElementById("horario").value,
+    site: document.getElementById("site").value,
+    preco_medio: document.getElementById("preco_medio").value,
+    imagem_principal: document.getElementById("imagem_principal").value,
+    fotos: [
+      {
+        id: 1,
+        titulo: "Foto 1",
+        imagem: document.getElementById("imagem_principal").value,
+      },
+    ],
+  };
+
+  let resultado;
+
+  if (id) {
+    // atualizar
+    resultado = await atualizarRestaurante(id, restaurante);
+    if (resultado) {
+      alert("Restaurante atualizado com sucesso!");
+      window.location.href = `detalhe.html?id=${id}`;
+    }
+  } else {
+    // criar
+    resultado = await criarRestaurante(restaurante);
+    if (resultado) {
+      alert("Restaurante criado com sucesso!");
+      window.location.href = "index.html";
+    }
+  }
+
+  if (!resultado) {
+    alert("Erro ao salvar restaurante.");
+  }
+}
+
 // Inicialização
 document.addEventListener("DOMContentLoaded", () => {
   const paginaAtual = window.location.pathname;
-
   if (paginaAtual.includes("index.html") || paginaAtual.endsWith("/")) {
     montarCarrossel();
     montarCards();
   }
-
   if (paginaAtual.includes("detalhe.html")) {
     mostrarDetalhes();
+  }
+  if (paginaAtual.includes("formulario.html")) {
+    preencherFormulario();
+    document
+      .getElementById("form-restaurante")
+      .addEventListener("submit", salvarRestaurante);
   }
 });
