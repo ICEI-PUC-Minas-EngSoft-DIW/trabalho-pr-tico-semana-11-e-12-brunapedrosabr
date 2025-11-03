@@ -6,24 +6,38 @@ Para esse projeto, além de mudarmos o JSON para o JSON Server, vamos permitir o
 
 ## Informações do trabalho
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Bruna Pedrosa Nunes
+- Matricula: 901902
+- Proposta de projeto escolhida: GastroBH
+- Breve descrição sobre seu projeto: O projeto se trata de um site que visa auxiliar o público de BH a encontrar locais para viver toda a experiência gastronômica que existe na cidade e que muitas pessoas ainda não conhecem.
 
 **Print dos testes da API com Postman ou similar**
 
-<< COLOQUE A IMAGEM GET AQUI >>
+### GET
 
-<< COLOQUE A IMAGEM POST AQUI >>
+![Print 1](public/assets/img/GET_restaurantes.jpg)
 
-<< COLOQUE A IMAGEM PUT AQUI >>
+### POST
 
-<< COLOQUE A IMAGEM DELETE AQUI >>
+![Print 2](public/assets/img/POST_restaurantes.jpg)
+
+### PUT
+
+![Print 3](public/assets/img/PUT_restaurantes.jpg)
+
+### DELETE
+
+![Print 4](public/assets/img/DELETE_restaurantes.jpg)
 
 **Print da aba NETWORK com requisições Fetch/XHR POST e GET**
 
-<< COLOQUE A IMAGEM AQUI >>
+### POST
+
+![Print 5](public/assets/img/POST_GastroBH.jpg)
+
+### GET
+
+![Print 6](public/assets/img/GET_GastroBH.jpg)
 
 ## **Orientações Gerais**
 
